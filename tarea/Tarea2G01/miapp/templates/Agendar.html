@@ -1,0 +1,85 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Agendar
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Agendar un evento</h1>
+
+<!-- En este segmento debemos indicarle al formulario qué hacer cuando se hace clic en el botón submit -->
+    <form action="/mostrar_resultado" method="POST" autocomplete="off">  {% csrf_token %} 
+    
+    <div class="form-group">
+      <label for="exampleNumber">Ingrese fecha del evento</label>
+      <input type="date" class="form-control" id="exampleDate" placeholder="Ingrese Fecha" name="inputDate">
+    </div>
+
+    
+    Seleccione lo que desea para el evento:
+
+    <div class="form-group">
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck1" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item1</label>
+    </div>
+
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck2" name="inputCheck1" value="item1">
+      <label class="form-check-label" for="exampleCheck2">item2</label>
+    </div>
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck3" name="inputCheck2" value="item1">
+      <label class="form-check-label" for="exampleChec3">item3</label>
+    </div>
+    
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck4" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item4</label>
+    </div>
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck5" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item5</label>
+    </div>
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck6" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item6</label>
+    </div>
+
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck7" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item7</label>
+    </div>
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck8" value="item1"> 
+      <label class="form-check-label" for="exampleCheck1">item8</label>
+    </div>
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck9" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item9</label>
+    </div> 
+    <div class="form-check form-check-inline" >
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" name="inputCheck10" value="item1">
+      <label class="form-check-label" for="exampleCheck1">item10</label>
+    </div>               
+
+    <br>   
+ 
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}

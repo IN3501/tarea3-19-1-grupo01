@@ -1,0 +1,67 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+registro
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Registro</h1>
+    <form action="/listo" method="POST" autocomplete="off">  {% csrf_token %} 
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nombre</label>
+      <input type="text" class="form-control" id="exampleText" placeholder="Ingrese nombre completo" name="inputText">
+    </div>
+
+     <div class="form-group">
+      <label for="exampleNumber">RUT</label>
+      <input type="number" class="form-control" id="exampleText" placeholder="Ingrese rut sin puntos ni guion" name="inputNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleNumber">Edad:</label>
+      <input type="number" class="form-control" id="exampleNumber" placeholder="Ingrese Edad" name="Edad">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="Ingrese email" name="inputEmail">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contraseña</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="Ingrese contraseña" name="inputPassword">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirme Contraseña</label>
+      <input type="password" class="form-control" id="examplePassword" placeholder="Confirme contraseña" name="inputPassword">
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Seleccione genero</label>
+      <select class="form-control" id="exampleSelect" name="input Select">
+        <option value="1">Masculino</option>
+        <option value="2">Femenino</option>
+        <option value="3">Prefiero no decirlo</option>
+        <option value="4">otro</option>
+      </select>
+    </div>
+
+    <br>
+
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}

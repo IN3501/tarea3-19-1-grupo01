@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">miapp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Bienvenido</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'registros' %}">Registro</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'Agendar' %}">Agendar</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'inventario' %}">Inventario</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'contacto' %}">Contactanos</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  {% block content %}
+  {% endblock content %}
+
+{% endblock body %}
+
+<form action="" method="POST">
+  ... Agendar ...
+</form>

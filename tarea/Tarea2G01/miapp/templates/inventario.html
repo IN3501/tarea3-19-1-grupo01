@@ -1,0 +1,28 @@
+
+{% extends 'navbar.html' %}
+
+{% block title %}
+Inventario
+{% endblock title %}
+
+{% block content %}
+
+<div id="descripcion" class="container">
+    <h1>Consulte por algún día</h1>  
+
+<!-- Aqui se deberia pedir una fecha y luego en funcion de esa fecha enviar a otra pestaña mostrando el status del inventario (que cosas estan ocupadas y que no)-->
+
+    <form action="/mostrar_inventario" method="POST" autocomplete="off">  {% csrf_token %} 
+
+
+ 
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  
+  </form>
+       
+</div>
+
+{% endblock content %}
